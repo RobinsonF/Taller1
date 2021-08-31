@@ -3,6 +3,8 @@
 # Merges two subarrays of arr[].
 # First subarray is arr[l..m]
 # Second subarray is arr[m+1..r]
+import random
+import time
 
 
 def merge(arr, l, m, r):
@@ -65,11 +67,18 @@ def mergeSort(arr, l, r):
         merge(arr, l, m, r)
 
 
+start = time.time()
 # Driver code to test above
-arr = [12, 11, 13, 5, 6, 7]
+arr = []
+for i in range(0, 400000):
+    arr.append(random.randint(1, 100))
+
 n = len(arr)
-print(arr)
+print(n)
 mergeSort(arr, 0, n - 1)
 print(arr)
+time.sleep(1)
+end = time.time()
+print(end - start)
 
 # This code is contributed by Mohit Kumra
