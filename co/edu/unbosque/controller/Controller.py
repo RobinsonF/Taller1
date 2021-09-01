@@ -37,21 +37,24 @@ class Controller:
                     arr.clear()
                     arr = Metodos().aleatorio(longitud)
                     inicio = time.time()
-                    Vista().escribir(Burbuja().burbuja(arr))
+                    a = Burbuja().burbuja(arr)
                     fin = time.time()
                     tiempo = fin - inicio
                     Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                    Vista().escribir(a)
                 if ordenar == 2:
                     arr.clear()
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
                     for i in range(0, longitud):
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
+
                     inicio = time.time()
-                    Vista().escribir(Burbuja().burbuja(arr))
+                    a = Burbuja().burbuja(arr)
                     fin = time.time()
                     tiempo = fin - inicio
                     Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                    Vista().escribir(a)
 
             if decision == 2:
                 arr.clear()
@@ -60,13 +63,24 @@ class Controller:
                                        "(2) Ingresarlos manualmente")
                 if ordenar == 1:
                     arr = Metodos().aleatorio(longitud)
-                    Vista().escribir(MergeSort().mergeSort(arr, 0, len(arr) - 1))
+                    inicio = time.time()
+                    a = MergeSort().mergeSort(arr, 0, len(arr) - 1)
+                    fin = time.time()
+                    tiempo = fin - inicio
+                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                    Vista().escribir(a)
                 if ordenar == 2:
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
                     for i in range(0, longitud):
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
-                    Vista().escribir(MergeSort().mergeSort(arr, 0, len(arr) - 1))
+
+                    inicio = time.time()
+                    a = MergeSort().mergeSort(arr, 0, len(arr) - 1)
+                    fin = time.time()
+                    tiempo = fin - inicio
+                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                    Vista().escribir(a)
 
             if decision == 3:
                 arr.clear()
@@ -75,13 +89,24 @@ class Controller:
                                        "(2) Ingresarlos manualmente")
                 if ordenar == 1:
                     arr = Metodos().aleatorio(longitud)
-                    Vista().escribir(QuickSort().ordenar(arr))
+                    inicio = time.time()
+                    a = QuickSort().ordenar(arr)
+                    fin = time.time()
+                    tiempo = fin - inicio
+                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                    Vista().escribir(a)
                 if ordenar == 2:
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
                     for i in range(0, longitud):
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
-                    Vista().escribir(QuickSort().ordenar(arr))
+
+                    inicio = time.time()
+                    a = QuickSort().ordenar(arr)
+                    fin = time.time()
+                    tiempo = fin - inicio
+                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                    Vista().escribir(a)
 
             if decision == 4:
                 arr.clear()
@@ -90,13 +115,24 @@ class Controller:
                                        "(2) Ingresarlos manualmente")
                 if ordenar == 1:
                     arr = Metodos().aleatorio(longitud)
-                    Vista().escribir(Radix().radix_sort(arr, len(arr)))
+                    inicio = time.time()
+                    a = Radix().radix_sort(arr, len(arr))
+                    fin = time.time()
+                    tiempo = fin - inicio
+                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                    Vista().escribir(a)
                 if ordenar == 2:
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
                     for i in range(0, longitud):
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
-                    Vista().escribir(Radix().radix_sort(arr, len(arr)))
+
+                    inicio = time.time()
+                    a = Radix().radix_sort(arr, len(arr))
+                    fin = time.time()
+                    tiempo = fin - inicio
+                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                    Vista().escribir(a)
 
             if decision == 5:
                 arr.clear()
@@ -106,13 +142,24 @@ class Controller:
                                        "(2) Ingresarlos manualmente")
                 if ordenar == 1:
                     arr = Metodos().aleatorio(longitud)
-                    Vista().escribir(Seleccion().seleccion(arr))
+                    inicio = time.time()
+                    a = Seleccion().seleccion(arr)
+                    fin = time.time()
+                    tiempo = fin - inicio
+                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                    Vista().escribir(a)
                 if ordenar == 2:
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
                     for i in range(0, longitud):
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
-                    Vista().escribir(Seleccion().seleccion(arr))
+
+                    inicio = time.time()
+                    a = Seleccion().seleccion(arr)
+                    fin = time.time()
+                    tiempo = fin - inicio
+                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                    Vista().escribir(a)
 
             if decision == 6:
                 exit()
