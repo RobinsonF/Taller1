@@ -1,3 +1,4 @@
+import time
 from co.edu.unbosque.model.Metodos import Metodos
 from co.edu.unbosque.view.Vista import Vista
 from co.edu.unbosque.model.Burbuja import Burbuja
@@ -28,20 +29,32 @@ class Controller:
                 "(6) Salir")
 
             if decision == 1:
+                arr.clear()
                 longitud = Vista().leer("Cuanto digitos desea ordenar")
                 ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
                                        "(2) Ingresarlos manualmente")
                 if ordenar == 1:
+                    arr.clear()
                     arr = Metodos().aleatorio(longitud)
+                    inicio = time.time()
                     Vista().escribir(Burbuja().burbuja(arr))
+                    fin = time.time()
+                    tiempo = fin - inicio
+                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
                 if ordenar == 2:
+                    arr.clear()
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
                     for i in range(0, longitud):
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
+                    inicio = time.time()
                     Vista().escribir(Burbuja().burbuja(arr))
+                    fin = time.time()
+                    tiempo = fin - inicio
+                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
 
             if decision == 2:
+                arr.clear()
                 longitud = Vista().leer("Cuanto digitos desea ordenar")
                 ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
                                        "(2) Ingresarlos manualmente")
@@ -54,10 +67,52 @@ class Controller:
                     for i in range(0, longitud):
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
                     Vista().escribir(MergeSort().mergeSort(arr, 0, len(arr) - 1))
-            # if decision == 3:
 
-            # if decision == 4:
+            if decision == 3:
+                arr.clear()
+                longitud = Vista().leer("Cuanto digitos desea ordenar")
+                ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
+                                       "(2) Ingresarlos manualmente")
+                if ordenar == 1:
+                    arr = Metodos().aleatorio(longitud)
+                    Vista().escribir(QuickSort().ordenar(arr))
+                if ordenar == 2:
+                    Vista().escribir(
+                        "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
+                    for i in range(0, longitud):
+                        arr.append(Vista().leer("Ingrese el numero que desea agregar"))
+                    Vista().escribir(QuickSort().ordenar(arr))
 
-            # if decision == 5:
+            if decision == 4:
+                arr.clear()
+                longitud = Vista().leer("Cuanto digitos desea ordenar")
+                ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
+                                       "(2) Ingresarlos manualmente")
+                if ordenar == 1:
+                    arr = Metodos().aleatorio(longitud)
+                    Vista().escribir(Radix().radix_sort(arr, len(arr)))
+                if ordenar == 2:
+                    Vista().escribir(
+                        "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
+                    for i in range(0, longitud):
+                        arr.append(Vista().leer("Ingrese el numero que desea agregar"))
+                    Vista().escribir(Radix().radix_sort(arr, len(arr)))
 
-            # if decision == 6:
+            if decision == 5:
+                arr.clear()
+                arr.clear()
+                longitud = Vista().leer("Cuanto digitos desea ordenar")
+                ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
+                                       "(2) Ingresarlos manualmente")
+                if ordenar == 1:
+                    arr = Metodos().aleatorio(longitud)
+                    Vista().escribir(Seleccion().seleccion(arr))
+                if ordenar == 2:
+                    Vista().escribir(
+                        "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
+                    for i in range(0, longitud):
+                        arr.append(Vista().leer("Ingrese el numero que desea agregar"))
+                    Vista().escribir(Seleccion().seleccion(arr))
+
+            if decision == 6:
+                exit()
