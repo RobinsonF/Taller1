@@ -42,7 +42,18 @@ class Controller:
                     Vista().escribir(Burbuja().burbuja(arr))
 
             if decision == 2:
-
+                longitud = Vista().leer("Cuanto digitos desea ordenar")
+                ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
+                                       "(2) Ingresarlos manualmente")
+                if ordenar == 1:
+                    arr = Metodos().aleatorio(longitud)
+                    Vista().escribir(MergeSort().mergeSort(arr, 0, len(arr) - 1))
+                if ordenar == 2:
+                    Vista().escribir(
+                        "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
+                    for i in range(0, longitud):
+                        arr.append(Vista().leer("Ingrese el numero que desea agregar"))
+                    Vista().escribir(MergeSort().mergeSort(arr, 0, len(arr) - 1))
             # if decision == 3:
 
             # if decision == 4:
