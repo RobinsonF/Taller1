@@ -1,5 +1,4 @@
 import math
-import time
 
 class Radix:
     def counting_sort(self, A, digit, radix):
@@ -17,11 +16,11 @@ class Radix:
 
         # este bucle FOR cambia C para mostrar el número acumulado de dígitos hasta ese índice de C
         for j in range(1, radix):
-            C[j] = C[j] + C[j-1]
+            C[j] = C[j] + C[j - 1]
             # aquí C se modifica para tener el número de elementos <= i
-        for m in range(len(A)-1, -1, -1): # para contar hacia atrás (pasar por A hacia atrás)
+        for m in range(len(A) - 1, -1, -1):  # para contar hacia atrás (pasar por A hacia atrás)
             digit_of_Ai = (A[m] / radix ** digit) % radix
-            C[int(digit_of_Ai)] = C[int(digit_of_Ai)] -1
+            C[int(digit_of_Ai)] = C[int(digit_of_Ai)] - 1
             B[C[int(digit_of_Ai)]] = A[m]
         return B
 
@@ -32,21 +31,7 @@ class Radix:
         # output es la lista de resultados que construiremos
         output = A
         # calcular el número de dígitos necesarios para representar k
-        digits = int(math.floor(math.log(k, radix)+1))
+        digits = int(math.floor(math.log(k, radix) + 1))
         for i in range(digits):
-            output = self.counting_sort(output,i,radix)
+            output = self.counting_sort(output, i, radix)
         return output
-
-def main():
-    a = Radix()
-    alist = [9,3,1,4,5,7,7,2,2]
-    #print (a.counting_sort(alist,0,10))
-
-    A = [9,3,1,4,5,7,7,2,20,55]
-    #A = [10,1,100,8]
-    print (a.radix_sort(A,10))
-
-inicio = time.time()
-main()
-fin = time.time()
-print(fin-inicio)

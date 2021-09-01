@@ -10,16 +10,16 @@ class QuickSort:
         for j in range(p, r):
             if (A[j] <= x):
                 i = i + 1
-                self.intercambia (A, i, j)
-        self.intercambia(A, i+1, r)
+                self.intercambia(A, i, j)
+        self.intercambia(A, i + 1, r)
         return i + 1
 
     def QuickSort(self, A, p, r):
         if (p < r):
             q = self.Particionar(A, p, r)
-            #print (A[p:r])
-            self.QuickSort(A, p, q-1)
-            self.QuickSort(A, q+1, r)
+            # print (A[p:r])
+            self.QuickSort(A, p, q - 1)
+            self.QuickSort(A, q + 1, r)
         return A
 
     def ordenar(self, A):
@@ -27,10 +27,3 @@ class QuickSort:
         r = len(A) - 1
         q = int((p + r) / 2)
         return self.QuickSort(A, p, r)
-
-def main():
-    a = [78, 67, 34, 35, 89, 56]
-    b = QuickSort()
-    print (b.ordenar(a))
-
-main()
