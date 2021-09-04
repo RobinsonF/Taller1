@@ -8,7 +8,7 @@ class QuickSort:
         x = A[r]
         i = p - 1
         for j in range(p, r):
-            if (A[j] <= x):
+            if (A[j] >= x):
                 i = i + 1
                 self.intercambia(A, i, j)
         self.intercambia(A, i + 1, r)
@@ -27,3 +27,4 @@ class QuickSort:
         r = len(A) - 1
         q = int((p + r) / 2)
         return self.QuickSort(A, p, r)
+

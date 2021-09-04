@@ -17,7 +17,7 @@ class MergeSort:
         k = l
 
         while i < n1 and j < n2:
-            if L[i] <= R[j]:
+            if L[i] >= R[j]:
                 arr[k] = L[i]
                 i += 1
             else:

@@ -9,3 +9,4 @@ class Metodos:
             arr.append(random.randint(1, 100))
         return arr
 
+

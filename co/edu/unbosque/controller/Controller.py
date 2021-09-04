@@ -1,5 +1,6 @@
 import time
 from co.edu.unbosque.model.Metodos import Metodos
+from co.edu.unbosque.model.Radix2 import Radix2
 from co.edu.unbosque.view.Vista import Vista
 from co.edu.unbosque.model.Burbuja import Burbuja
 from co.edu.unbosque.model.MergeSort import MergeSort
@@ -68,7 +69,7 @@ class Controller:
                     fin = time.time()
                     tiempo = fin - inicio
                     Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
-                    Vista().escribir(a)
+                    #Vista().escribir(a)
                 if ordenar == 2:
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")

@@ -18,7 +18,7 @@ class Radix:
         for j in range(1, radix):
             C[j] = C[j] + C[j - 1]
             # aquí C se modifica para tener el número de elementos <= i
-        for m in range(len(A) - 1, -1, -1):  # para contar hacia atrás (pasar por A hacia atrás)
+        for m in range(len(A) - 1, -1, -6):  # para contar hacia atrás (pasar por A hacia atrás)
             digit_of_Ai = (A[m] / radix ** digit) % radix
             C[int(digit_of_Ai)] = C[int(digit_of_Ai)] - 1
             B[C[int(digit_of_Ai)]] = A[m]

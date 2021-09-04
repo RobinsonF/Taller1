@@ -3,7 +3,7 @@ class Seleccion:
         for i in range(len(A)):
             minimo = i
             for j in range(i, len(A)):
-                if (A[j] < A[minimo]):
+                if (A[j] > A[minimo]):
                     minimo = j
             if (minimo != i):
                 aux = A[i]
