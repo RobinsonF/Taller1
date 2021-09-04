@@ -31,18 +31,38 @@ class Controller:
 
             if decision == 1:
                 arr.clear()
-                longitud = Vista().leer("Cuanto digitos desea ordenar")
-                ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
-                                       "(2) Ingresarlos manualmente")
+                longitud = Vista().leer("¿Cuánto digitos desea ordenar?")
+                ordenar = Vista().leer("(1) Generar números aleatorios\n"
+                                       "(2) Ingresar manualmente")
                 if ordenar == 1:
                     arr.clear()
-                    arr = Metodos().aleatorio(longitud)
-                    inicio = time.time()
-                    a = Burbuja().burbuja(arr)
-                    fin = time.time()
-                    tiempo = fin - inicio
-                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
-                    Vista().escribir(a)
+                    if ordenar == 1:
+                        caso = Vista().leer("(1) Mejor caso\n(2) Caso promedio\n(3) Peor caso")
+                        if caso == 1:
+                            arr = Metodos().mejorCaso(longitud)
+                            inicio = time.time()
+                            a = Burbuja().burbuja(arr)
+                            fin = time.time()
+                            tiempo = fin - inicio
+                            Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                            # Vista().escribir(a)
+
+                        if caso == 2:
+                            arr = Metodos().casoPromedio(longitud)
+                            inicio = time.time()
+                            a = Burbuja().burbuja(arr)
+                            fin = time.time()
+                            tiempo = fin - inicio
+                            Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                            # Vista().escribir(a)
+
+                        if caso == 3:
+                            arr = Metodos().peorCaso(longitud)
+                            inicio = time.time()
+                            a = Burbuja().burbuja(arr)
+                            fin = time.time()
+                            tiempo = fin - inicio
+                            Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
                 if ordenar == 2:
                     arr.clear()
                     Vista().escribir(
@@ -63,13 +83,34 @@ class Controller:
                 ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
                                        "(2) Ingresarlos manualmente")
                 if ordenar == 1:
-                    arr = Metodos().aleatorio(longitud)
-                    inicio = time.time()
-                    a = MergeSort().mergeSort(arr, 0, len(arr) - 1)
-                    fin = time.time()
-                    tiempo = fin - inicio
-                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
-                    #Vista().escribir(a)
+                    caso = Vista().leer("(1) Mejor caso\n(2) Caso promedio\n(3) Peor caso")
+                    if caso == 1:
+                        arr = Metodos().mejorCaso(longitud)
+                        inicio = time.time()
+                        a = MergeSort().mergeSort(arr, 0, len(arr) - 1)
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                        # Vista().escribir(a)
+
+                    if caso == 2:
+                        arr = Metodos().casoPromedio(longitud)
+                        inicio = time.time()
+                        a = MergeSort().mergeSort(arr, 0, len(arr) - 1)
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                        # Vista().escribir(a)
+
+                    if caso == 3:
+                        arr = Metodos().peorCaso(longitud)
+                        inicio = time.time()
+                        a = MergeSort().mergeSort(arr, 0, len(arr) - 1)
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                        # Vista().escribir(a)
+
                 if ordenar == 2:
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
@@ -89,13 +130,32 @@ class Controller:
                 ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
                                        "(2) Ingresarlos manualmente")
                 if ordenar == 1:
-                    arr = Metodos().aleatorio(longitud)
-                    inicio = time.time()
-                    a = QuickSort().ordenar(arr)
-                    fin = time.time()
-                    tiempo = fin - inicio
-                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
-                    Vista().escribir(a)
+                    caso = Vista().leer("(1) Mejor caso\n(2) Caso promedio\n(3) Peor caso")
+                    if caso == 1:
+                        arr = Metodos().mejorCaso(longitud)
+                        inicio = time.time()
+                        a = QuickSort().ordenar(arr)
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                        # Vista().escribir(a)
+
+                    if caso == 2:
+                        arr = Metodos().casoPromedio(longitud)
+                        inicio = time.time()
+                        a = QuickSort().ordenar(arr)
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                        # Vista().escribir(a)
+
+                    if caso == 3:
+                        arr = Metodos().peorCaso(longitud)
+                        inicio = time.time()
+                        a = QuickSort().ordenar(arr)
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
                 if ordenar == 2:
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
@@ -115,13 +175,32 @@ class Controller:
                 ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
                                        "(2) Ingresarlos manualmente")
                 if ordenar == 1:
-                    arr = Metodos().aleatorio(longitud)
-                    inicio = time.time()
-                    a = Radix().radix_sort(arr, len(arr))
-                    fin = time.time()
-                    tiempo = fin - inicio
-                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
-                    Vista().escribir(a)
+                    caso = Vista().leer("(1) Mejor caso\n(2) Caso promedio\n(3) Peor caso")
+                    if caso == 1:
+                        arr = Metodos().mejorCaso(longitud)
+                        inicio = time.time()
+                        a = Radix().radix_sort(arr, len(arr))
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                        # Vista().escribir(a)
+
+                    if caso == 2:
+                        arr = Metodos().casoPromedio(longitud)
+                        inicio = time.time()
+                        a = Radix().radix_sort(arr, len(arr))
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                        # Vista().escribir(a)
+
+                    if caso == 3:
+                        arr = Metodos().peorCaso(longitud)
+                        inicio = time.time()
+                        a = Radix().radix_sort(arr, len(arr))
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
                 if ordenar == 2:
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
@@ -137,18 +216,36 @@ class Controller:
 
             if decision == 5:
                 arr.clear()
-                arr.clear()
                 longitud = Vista().leer("Cuanto digitos desea ordenar")
                 ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
                                        "(2) Ingresarlos manualmente")
                 if ordenar == 1:
-                    arr = Metodos().aleatorio(longitud)
-                    inicio = time.time()
-                    a = Seleccion().seleccion(arr)
-                    fin = time.time()
-                    tiempo = fin - inicio
-                    Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
-                    Vista().escribir(a)
+                    caso = Vista().leer("(1) Mejor caso\n(2) Caso promedio\n(3) Peor caso")
+                    if caso == 1:
+                        arr = Metodos().mejorCaso(longitud)
+                        inicio = time.time()
+                        a = Seleccion().seleccion(arr)
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                        # Vista().escribir(a)
+
+                    if caso == 2:
+                        arr = Metodos().casoPromedio(longitud)
+                        inicio = time.time()
+                        a = Seleccion().seleccion(arr)
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
+                        # Vista().escribir(a)
+
+                    if caso == 3:
+                        arr = Metodos().peorCaso(longitud)
+                        inicio = time.time()
+                        a = Seleccion().seleccion(arr)
+                        fin = time.time()
+                        tiempo = fin - inicio
+                        Vista().escribir("Tiempo de ejecucion: " + str(tiempo))
                 if ordenar == 2:
                     Vista().escribir(
                         "A continuacion escriba un numero de la lista, de enter y escriba los demas secuencialmente")
