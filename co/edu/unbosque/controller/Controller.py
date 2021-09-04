@@ -41,6 +41,7 @@ class Controller:
                         if caso == 1:
                             arr = Metodos().mejorCaso(longitud)
                             inicio = time.time()
+                            time.sleep(1)
                             a = Burbuja().burbuja(arr)
                             fin = time.time()
                             tiempo = fin - inicio
@@ -50,6 +51,7 @@ class Controller:
                         if caso == 2:
                             arr = Metodos().casoPromedio(longitud)
                             inicio = time.time()
+                            time.sleep(1)
                             a = Burbuja().burbuja(arr)
                             fin = time.time()
                             tiempo = fin - inicio
@@ -59,6 +61,7 @@ class Controller:
                         if caso == 3:
                             arr = Metodos().peorCaso(longitud)
                             inicio = time.time()
+                            time.sleep(1)
                             a = Burbuja().burbuja(arr)
                             fin = time.time()
                             tiempo = fin - inicio
@@ -71,6 +74,7 @@ class Controller:
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
 
                     inicio = time.time()
+                    time.sleep(1)
                     a = Burbuja().burbuja(arr)
                     fin = time.time()
                     tiempo = fin - inicio
@@ -87,6 +91,7 @@ class Controller:
                     if caso == 1:
                         arr = Metodos().mejorCaso(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = MergeSort().mergeSort(arr, 0, len(arr) - 1)
                         fin = time.time()
                         tiempo = fin - inicio
@@ -96,6 +101,7 @@ class Controller:
                     if caso == 2:
                         arr = Metodos().casoPromedio(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = MergeSort().mergeSort(arr, 0, len(arr) - 1)
                         fin = time.time()
                         tiempo = fin - inicio
@@ -105,6 +111,7 @@ class Controller:
                     if caso == 3:
                         arr = Metodos().peorCaso(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = MergeSort().mergeSort(arr, 0, len(arr) - 1)
                         fin = time.time()
                         tiempo = fin - inicio
@@ -118,6 +125,7 @@ class Controller:
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
 
                     inicio = time.time()
+                    time.sleep(1)
                     a = MergeSort().mergeSort(arr, 0, len(arr) - 1)
                     fin = time.time()
                     tiempo = fin - inicio
@@ -134,6 +142,7 @@ class Controller:
                     if caso == 1:
                         arr = Metodos().mejorCaso(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = QuickSort().ordenar(arr)
                         fin = time.time()
                         tiempo = fin - inicio
@@ -143,6 +152,7 @@ class Controller:
                     if caso == 2:
                         arr = Metodos().casoPromedio(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = QuickSort().ordenar(arr)
                         fin = time.time()
                         tiempo = fin - inicio
@@ -152,6 +162,7 @@ class Controller:
                     if caso == 3:
                         arr = Metodos().peorCaso(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = QuickSort().ordenar(arr)
                         fin = time.time()
                         tiempo = fin - inicio
@@ -163,6 +174,7 @@ class Controller:
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
 
                     inicio = time.time()
+                    time.sleep(1)
                     a = QuickSort().ordenar(arr)
                     fin = time.time()
                     tiempo = fin - inicio
@@ -179,6 +191,7 @@ class Controller:
                     if caso == 1:
                         arr = Metodos().mejorCaso(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = Radix().radix_sort(arr, len(arr))
                         fin = time.time()
                         tiempo = fin - inicio
@@ -188,6 +201,7 @@ class Controller:
                     if caso == 2:
                         arr = Metodos().casoPromedio(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = Radix().radix_sort(arr, len(arr))
                         fin = time.time()
                         tiempo = fin - inicio
@@ -197,6 +211,7 @@ class Controller:
                     if caso == 3:
                         arr = Metodos().peorCaso(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = Radix().radix_sort(arr, len(arr))
                         fin = time.time()
                         tiempo = fin - inicio
@@ -208,6 +223,7 @@ class Controller:
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
 
                     inicio = time.time()
+                    time.sleep(1)
                     a = Radix().radix_sort(arr, len(arr))
                     fin = time.time()
                     tiempo = fin - inicio
@@ -224,6 +240,7 @@ class Controller:
                     if caso == 1:
                         arr = Metodos().mejorCaso(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = Seleccion().seleccion(arr)
                         fin = time.time()
                         tiempo = fin - inicio
@@ -233,6 +250,7 @@ class Controller:
                     if caso == 2:
                         arr = Metodos().casoPromedio(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = Seleccion().seleccion(arr)
                         fin = time.time()
                         tiempo = fin - inicio
@@ -242,6 +260,7 @@ class Controller:
                     if caso == 3:
                         arr = Metodos().peorCaso(longitud)
                         inicio = time.time()
+                        time.sleep(1)
                         a = Seleccion().seleccion(arr)
                         fin = time.time()
                         tiempo = fin - inicio
@@ -253,6 +272,7 @@ class Controller:
                         arr.append(Vista().leer("Ingrese el numero que desea agregar"))
 
                     inicio = time.time()
+                    time.sleep(1)
                     a = Seleccion().seleccion(arr)
                     fin = time.time()
                     tiempo = fin - inicio
