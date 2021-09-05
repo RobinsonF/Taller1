@@ -1,6 +1,5 @@
 import time
 from co.edu.unbosque.model.Metodos import Metodos
-from co.edu.unbosque.model.Radix2 import Radix2
 from co.edu.unbosque.view.Vista import Vista
 from co.edu.unbosque.model.Burbuja import Burbuja
 from co.edu.unbosque.model.MergeSort import MergeSort
@@ -15,6 +14,11 @@ class Controller:
         self.iniciar()
 
     def iniciar(self):
+        '''
+        Esta función se encarga de iniciar todo el programa
+        :return:
+        Inica el programa
+        '''
         arr = []
         decision = 0
 

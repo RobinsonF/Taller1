@@ -1,5 +1,17 @@
 class MergeSort:
     def merge(self, arr, l, m, r):
+        '''
+        Esta función se encarga de ordenar una lista de manera ascendente
+        :param arr:
+        Es la lista a ordenar
+        :param l:
+        Es por donde empezará
+        :param m:
+        Tamaño intermedio de la lista
+        :param r:
+        Es el tamaño de la lista
+        :return:
+        '''
         n1 = m - l + 1
         n2 = r - m
 
@@ -37,12 +49,20 @@ class MergeSort:
         return arr
 
     def mergeSort(self, arr, l, r):
+        '''
+        Esta función se encarga de ordenar una lista de manera descendente por medio del algoritmo de MergeSort
+        :param arr:
+        Es la lista a ordenar
+        :param l:
+        Es por donde empezará
+        :param r:
+        Es el tamaño de la lista
+        :return:
+        La lista ordenada
+        '''
         if l < r:
-            # Same as (l+r)//2, but avoids overflow for
-            # large l and h
             m = l + (r - l) // 2
 
-            # Sort first and second halves
             self.mergeSort(arr, l, m)
             self.mergeSort(arr, m + 1, r)
             self.merge(arr, l, m, r)
