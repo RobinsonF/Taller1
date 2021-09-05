@@ -174,7 +174,7 @@ class Controller:
                 ordenar = Vista().leer("(1) Generar numeros aleatorios\n"
                                        "(2) Ingresarlos manualmente")
                 if ordenar == 1:
-                    arr = Metodos().mejorCaso(longitud)
+                    arr = Metodos().peorCaso(longitud)
                     inicio = time.time()
                     time.sleep(1)
                     a = Radix().radix_sort(arr, len(arr))
@@ -192,7 +192,7 @@ class Controller:
                     Vista().escribir("Caso promedio\nTiempo de ejecucion: " + str(tiempo-1) + " segundos")
                     # Vista().escribir(a)
 
-                    arr = Metodos().peorCaso(longitud)
+                    arr = Metodos().mejorCaso(longitud)
                     inicio = time.time()
                     time.sleep(1)
                     a = Radix().radix_sort(arr, len(arr))
